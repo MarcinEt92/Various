@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="row" style="background: grey; color: white;">
+        <div align="center"><h1 class="col-md-3 text-center">Weather Detector</h1></div>
+    </nav>
+
+    <center class="row">
+        <form action="" method="post" style="margin-top: 20px">
+            {% csrf_token %}
+            <div class="input-group">
+                <input type="text" class="form-control" name="city" placeholder="city">
+                <input type="submit" class="btn btn-default" value="search" style="margin-top: 10px">
+            </div>
+        </form>
+    </center>
+    <center class="row" style="margin-top: 40px">
+        <p>City: {{city}}</p>
+        <p>Min temperature: {{min_temp}} 'C</p>
+        <p>Max temperature: {{max_temp}} 'C</p>
+    </center>
+</body>
+</html>

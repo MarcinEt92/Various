@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+</head>
+<body>
+    {% if pk is not null %}
+        <h3>Value in URL is {{pk}}</h3>
+    {% endif %}
+
+    {% for post in posts %}
+    <h3><a href="{% url 'post' post %}">Post {{post}}</a></h3>
+    {% endfor %}
+
+</body>
+</html>

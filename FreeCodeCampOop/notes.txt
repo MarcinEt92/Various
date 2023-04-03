@@ -1,0 +1,27 @@
+notes:
+https://www.youtube.com/watch?v=Ej_02ICOIgs
+25:39 - caring about parameter types
+27:27 - caring about negative values of arguments, asserts, arguments validation
+31:30 - global attribute, shared across the instances (class attributes), pay_rate - cls attribute
+available from class or an instance of the class
+34:43 - explanation of attributes, when instance of the class tries to invoke attribute, at first is being looked
+for in instance attributes, but if python did not find it, it looks for it in class variables
+__dict__ -  stores an object’s (writable) attributes
+40:00 - item1.pay_rate = 0.7, creates an instance variable, Item.pay_rate remains the same 0.8
+self.pay_rate vs Item.pay_rate - in this case individual pay_rate can be applied to any item or global
+value can be used if individual not provided (it first looks for instance variables)
+43:20 - create resource of items, line 20, all = [], Item.all.append(self) objects append
+str vs repr - https://www.youtube.com/watch?v=FIaPZXaePhw
+55:10 - class method
+1:13:23 - inheritance
+1:27:30 - change in repr method to be more generic, self.__class__.__name__
+1:34:00 - encapsulation, in our case name attribute should not be set and modified at any place
+_name - is actually a 'protected' attribute, You can still modify it, printing its name can be possible  with a warning
+__name - private attribute that cannot be accessed or modified outside a class
+1:43:30 - set a new value to an private attribute using property, declaring a @name.setter
+
+
+
+https://www.programiz.com/python-programming/first-program
+
+https://www.pythontutorial.net/python-oop/

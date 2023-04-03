@@ -1,0 +1,31 @@
+{% load static %}
+<html>
+    <head>
+        <title>Model Sample</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    </head>
+    <body>
+        <h1>Model Sample</h1>
+        <!--retrieving value from passed argument as dict-->
+        <h2>Feature Name: {{feature.name}}</h2>
+        <h3>Go to <a href="counter">word counter</a></h3>
+        <h3>Go to <a href="register">register</a></h3></body>
+        <h3>Go to <a href=".">index</a></h3>
+
+        <h3>loop through features:</h3>
+        <div class="services">
+            {% for feature in features %}
+                <div class="services">
+                <p>{{feature.name}}</p>
+                <p>{{feature.details}}</p>
+                {% if feature.is_true %}
+                    <p>This Feature Is True</p>
+                {% else %}
+                    <p>This Feature Is False</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        </div>
+    </body>
+</html>

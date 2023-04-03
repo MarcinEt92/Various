@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Word Counter</title>
+    </head>
+    <body>
+        <h1>Word Counter</h1>
+        <form method="POST" action="count_words">
+            {% csrf_token %}
+            <textarea name="text" rows="10" cols="25"></textarea><br>
+            <input type="submit">
+        </form>
+    <h2>Amount Of Words Is: {{amount_of_words}}</h2>
+    <h3>Go to <a href="model_sample">model sample</a></h3><h3>Go to <a href="register">register</a></h3></body>
+    <h3>Go to <a href=".">index</a></h3>
+    <h3>Go to <a href="register">register</a></h3></body>
+    </body>
+</html>

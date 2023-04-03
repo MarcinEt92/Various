@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+    <head>
+        <title>Index Page</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    </head>
+    <body>
+        <h1>New response from a template</h1>
+        <!--retrieving value from passed argument as dict-->
+
+        {% if user.is_authenticated %}
+            <a href="logout">Log out</a>
+        {% else %}
+            <a href="login">Log in </a> or<a href="register"> register</a>
+        {% endif %}
+
+
+        {% if user.is_authenticated %}
+            <h2>Welcome: {{user.username}}</h2>
+        {% else %}
+            <h2>User Not Authenticated</h2>
+        {% endif %}
+
+        <h2>Name: {{name}}</h2>
+        <h2>Age: {{age}}</h2>
+        <h2>Nationality: {{nationality}}</h2>
+        <h3>Go to <a href="counter">word counter</a></h3></body>
+        <h3>Go to <a href="model_sample">model sample</a></h3></body>
+        <h3>Go to <a href="register">register</a></h3></body>
+    </body>
+</html>
